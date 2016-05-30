@@ -54,16 +54,16 @@ get_header(); ?>
  </div>
 	 <article class="gris">
 		<section class="widow">
-	   <div class="row">
+	   <div class="row titre">
 	     <div class="small-12 large-12 columns">
 	       <h1>Nouveautés</h1>
-
+         <hr>
 	     </div>
 	   </div>
 	   <div class="row">
        <!-- debut loop -->
     <?php
-      $args = array( 'post_type' => 'product', 'stock' => 1, 'posts_per_page' => 4, 'orderby' =>'date','order' => 'DESC' );
+      $args = array( 'post_type' => 'product', 'stock' => 1, 'posts_per_page' => 8, 'orderby' =>'date','order' => 'DESC' );
       $loop = new WP_Query( $args );
       while ( $loop->have_posts() ) : $loop->the_post(); global $product;
       $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'thumbnail' );
@@ -95,22 +95,11 @@ get_header(); ?>
 
        <?php endwhile; ?>
        <?php wp_reset_query(); ?>
-
-	     <!--<div class="small-12 columns owl-carousel visuel" id="owl-carousel1">
-	       <div class="item"><img src="<?= _URL_IMAGES; ?>/_montre/pour_slide.jpg" alt=""/></div>
-	       <div class="item"><img src="<?= _URL_IMAGES; ?>/_montre/pour_slide.jpg" alt=""/></div>
-	       <div class="item"><img src="<?= _URL_IMAGES; ?>/_montre/pour_slide.jpg" alt=""/></div>
-	       <div class="item"><img src="<?= _URL_IMAGES; ?>/_montre/pour_slide.jpg" alt=""/></div>
-	       <div class="item"><img src="<?= _URL_IMAGES; ?>/_montre/pour_slide.jpg" alt=""/></div>
-	       <div class="item"><img src="<?= _URL_IMAGES; ?>/_montre/pour_slide.jpg" alt=""/></div>
-	       <div class="item"><img src="<?= _URL_IMAGES; ?>/_montre/pour_slide.jpg" alt=""/></div>
-	       <div class="item"><img src="<?= _URL_IMAGES; ?>/_montre/pour_slide.jpg" alt=""/></div>
-	       <div class="item"><img src="<?= _URL_IMAGES; ?>/_montre/pour_slide.jpg" alt=""/></div>
-	       <div class="item"><img src="<?= _URL_IMAGES; ?>/_montre/pour_slide.jpg" alt=""/></div>
-	       <div class="item"><img src="<?= _URL_IMAGES; ?>/_montre/pour_slide.jpg" alt=""/></div>
-	     </div>-->
 	   </div>
 	 </section>
+
+   <!-- RECOMMANDATION
+   ======================== -->
 
    <section class="widow">
      <div class="row">
@@ -119,89 +108,52 @@ get_header(); ?>
          <hr>
        </div>
      </div>
-       <div class="row ">
-
+       <div class="row">
          <div class="small-12 large-8 columns visuel owl-carousel " id="owl-carousel">
-           <div class="item" data-hash="1">
+
+           <?php
+             $args = array( 'post_type' => 'product', 'stock' => 1, 'posts_per_page' => 4, 'orderby' =>'date','order' => 'DESC' );
+             $loop = new WP_Query( $args );
+             while ( $loop->have_posts() ) : $loop->the_post(); global $product;
+             $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'thumbnail' );
+             $url = $thumb['0'];
+           ?>
+
+           <div class="item" data-hash="<?php echo $product->id ?>">
              <div class="large-6 small-6 columns visu_one">
                <div class="visu">
-                 <img src="<?= _URL_IMAGES; ?>/_montre/visu.jpg" alt=""/>
+                 <img src="<?php echo $url ?>" alt=""/>
                </div>
              </div>
              <div class="large-6 small-6 columns texte">
-               <h2>Apple Watch jaune n°1</h2>
-               <ul>
-                 <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                 <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                 <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                 <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-               </ul>
-               <a href="#" class="button large-12 small-12 hvr-reveal">En savoir plus</a>
-               <a href="#" class="button large-12 small-12 hvr-reveal">Ajouter au panier</a>
-             </div>
-           </div>
-           <div class="item" data-hash="2">
-             <div class="large-6 small-6 columns visu_one">
-               <div class="visu">
-                 <img src="<?= _URL_IMAGES; ?>/_montre/visu.jpg" alt=""/>
+               <h2><? the_title() ?></h2>
+               <div class="">
+                 <?php echo the_excerpt() ?>
                </div>
-             </div>
-             <div class="large-6 small-6 columns texte">
-               <h2>Apple Watch jaune n°2</h2>
-               <ul>
-                 <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                 <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                 <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                 <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-               </ul>
-               <a href="#" class="button large-12 small-12">En savoir plus</a>
-               <a href="#" class="button large-12 small-12">Ajouter au panier</a>
+               <a href="<?php the_permalink() ?>" class="button large-12 small-12 hvr-reveal">En savoir plus</a>
+               <!--<a href="?add-to-cart=<?php echo $product->id ?>" class="button large-12 small-12 hvr-reveal">Ajouter au panier</a>-->
+               <?php woocommerce_template_loop_add_to_cart( $loop->post, $product ); ?>
              </div>
            </div>
-           <div class="item" data-hash="3">
-             <div class="large-6 small-6 columns visu_one">
-               <div class="visu">
-                 <img src="<?= _URL_IMAGES; ?>/_montre/visu.jpg" alt=""/>
-               </div>
-             </div>
-             <div class="large-6 small-6 columns texte">
-               <h2>Apple Watch jaune n°2</h2>
-               <ul>
-                 <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                 <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                 <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                 <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-               </ul>
-               <a href="#" class="button large-12 small-12">En savoir plus</a>
-               <a href="#" class="button large-12 small-12">Ajouter au panier</a>
-             </div>
-           </div>
-           <div class="item" data-hash="4">
-             <div class="large-6 small-6 columns visu_one">
-               <div class="visu">
-                 <img src="<?= _URL_IMAGES; ?>/_montre/visu.jpg" alt=""/>
-               </div>
-             </div>
-             <div class="large-6 small-6 columns texte">
-               <h2>Apple Watch jaune n°2</h2>
-               <ul>
-                 <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                 <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                 <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                 <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-               </ul>
-               <a href="#" class="button large-12 small-12">En savoir plus</a>
-               <a href="#" class="button large-12 small-12">Ajouter au panier</a>
-             </div>
-           </div>
+
+         <?php endwhile; ?>
+         <?php wp_reset_query(); ?>
          </div>
 
        <div class="small-12 large-4 columns">
          <div class="row">
+
+           <?php
+             $args = array( 'post_type' => 'product', 'stock' => 1, 'posts_per_page' => 4, 'orderby' =>'date','order' => 'DESC' );
+             $loop = new WP_Query( $args );
+             while ( $loop->have_posts() ) : $loop->the_post(); global $product;
+             $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'thumbnail' );
+             $url = $thumb['0'];
+           ?>
+
            <div class=" large-6 small-6 columns visu_tow">
              <div class="petit_visu">
-
-               <a href="#1">
+               <a href="#<?php echo $product->id ?>">
                  <div class="detail">
                    <div class="etoile">
                      <i class="fa fa-star" aria-hidden="true"></i>
@@ -212,72 +164,15 @@ get_header(); ?>
                    </div>
                    <p>Excellent état</p>
                    <p>Disponible</p>
-                   <a href="#1" class="expanded button btndetail">Voir plus</a>
+                   <a href="#<?php echo $product->id ?>" class="expanded button btndetail">Voir plus</a>
                  </div>
                </a>
-               <img src="<?= _URL_IMAGES; ?>/_montre/petit_visu.jpg" alt=""/>
+               <img src="<?php echo $url ?>" alt=""/>
              </div>
            </div>
-           <div class=" large-6 small-6 columns visu_tow">
-             <div class="petit_visu">
 
-               <a href="#2">
-                 <div class="detail">
-                   <div class="etoile">
-                     <i class="fa fa-star" aria-hidden="true"></i>
-                     <i class="fa fa-star" aria-hidden="true"></i>
-                     <i class="fa fa-star" aria-hidden="true"></i>
-                     <i class="fa fa-star" aria-hidden="true"></i>
-                     <i class="fa fa-star-o" aria-hidden="true"></i>
-                   </div>
-                   <p>Excellent état</p>
-                   <p>Disponible</p>
-                   <a href="#2" class="expanded button btndetail">Voir plus</a>
-                 </div>
-               </a>
-               <img src="<?= _URL_IMAGES; ?>/_montre/petit_visu.jpg" alt=""/>
-             </div>
-           </div>
-           <div class=" large-6 small-6 columns visu_tow">
-             <div class="petit_visu">
-
-               <a href="#3">
-                 <div class="detail">
-                   <div class="etoile">
-                     <i class="fa fa-star" aria-hidden="true"></i>
-                     <i class="fa fa-star" aria-hidden="true"></i>
-                     <i class="fa fa-star" aria-hidden="true"></i>
-                     <i class="fa fa-star" aria-hidden="true"></i>
-                     <i class="fa fa-star-o" aria-hidden="true"></i>
-                   </div>
-                   <p>Excellent état</p>
-                   <p>Disponible</p>
-                   <a href="#3" class="expanded button btndetail">Voir plus</a>
-                 </div>
-               </a>
-               <img src="<?= _URL_IMAGES; ?>/_montre/petit_visu.jpg" alt=""/>
-             </div>
-           </div>
-           <div class=" large-6 small-6 columns visu_tow">
-             <div class="petit_visu">
-
-               <a href="#4">
-                 <div class="detail">
-                   <div class="etoile">
-                     <i class="fa fa-star" aria-hidden="true"></i>
-                     <i class="fa fa-star" aria-hidden="true"></i>
-                     <i class="fa fa-star" aria-hidden="true"></i>
-                     <i class="fa fa-star" aria-hidden="true"></i>
-                     <i class="fa fa-star-o" aria-hidden="true"></i>
-                   </div>
-                   <p>Excellent état</p>
-                   <p>Disponible</p>
-                   <a href="#4" class="expanded button btndetail">Voir plus</a>
-                 </div>
-               </a>
-               <img src="<?= _URL_IMAGES; ?>/_montre/petit_visu.jpg" alt=""/>
-             </div>
-           </div>
+         <?php endwhile; ?>
+         <?php wp_reset_query(); ?>
          </div>
        </div>
      </div>

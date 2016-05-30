@@ -32,9 +32,9 @@ get_header(); ?>
   ?>
 
     <!-- STYLE ARTICLE -->
-    <div class="large-3 small-6 columns visu_tow" style="background:url(<?php echo $url ?>) no-repeat center">
+    <div class="large-3 small-6 columns visu_tow">
       <div class="petit_visu">
-
+          <div class="full" style="background-image:url(<?php echo $url ?>)"></div>
           <div class="detail">
             <div class="etoile">
               <i class="fa fa-star" aria-hidden="true"></i>
@@ -53,6 +53,7 @@ get_header(); ?>
 
       </div>
     </div>
+
      <?php endwhile; ?>
      <?php wp_reset_query(); ?>
 </div>
@@ -81,9 +82,9 @@ get_header(); ?>
   ?>
 
     <!-- STYLE ARTICLE -->
-    <div class="large-3 small-6 columns visu_tow" style="background:url(<?php echo $url ?>) no-repeat center">
+    <div class="large-3 small-6 columns visu_tow">
       <div class="petit_visu">
-
+          <div class="full" style="background-image:url(<?php echo $url ?>)"></div>
           <div class="detail">
             <div class="etoile">
               <i class="fa fa-star" aria-hidden="true"></i>

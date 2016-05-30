@@ -29,15 +29,15 @@
 		           <p>LIVRAISON RAPIDE ET SÉCURISÉE</p>
 		        </div>
 		        <div class="small-12 large-3 columns assurance">
-		           <img src="<?= _URL_IMAGES; ?>/_icon/livraison.png" alt=""/>
+		           <img src="<?= _URL_IMAGES; ?>/_icon/qualite.png" alt=""/>
 		           <p>LIVRAISON RAPIDE ET SÉCURISÉE</p>
 		        </div>
 		        <div class="small-12 large-3 columns assurance">
-		           <img src="<?= _URL_IMAGES; ?>/_icon/livraison.png" alt=""/>
+		           <img src="<?= _URL_IMAGES; ?>/_icon/garantie.png" alt=""/>
 		           <p>LIVRAISON RAPIDE ET SÉCURISÉE</p>
 		        </div>
 		        <div class="small-12 large-3 columns assurance">
-		           <img src="<?= _URL_IMAGES; ?>/_icon/livraison.png" alt=""/>
+		           <img src="<?= _URL_IMAGES; ?>/_icon/sansfrai.png" alt=""/>
 		           <p>LIVRAISON RAPIDE ET SÉCURISÉE</p>
 		        </div>
 		      </div>
@@ -47,10 +47,10 @@
 		    <div id="page-full-width">
 		      <div class="row">
 		        <div class="small-12 large-8 columns reso">
-		           <a href="#"><i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i></a>
-		           <a href="#"><i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i></a>
-		           <a href="#"><i class="fa fa-pinterest-square fa-3x" aria-hidden="true"></i></a>
-		           <a href="#"><i class="fa fa-instagram fa-3x" ></i></a>
+		           <a href="#" class="animationrotate"><i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i></a>
+		           <a href="#" class="animationrotate"><i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i></a>
+		           <a href="#" class="animationrotate"><i class="fa fa-pinterest-square fa-3x" aria-hidden="true"></i></a>
+		           <a href="#" class="animationrotate"><i class="fa fa-instagram fa-3x" ></i></a>
 		        </div>
 		        <div class="small-12 large-4 columns news">
 		          <a href="#" class="large-12 small-12 hvr-reveal2">s'abonner à la newsletter</a>

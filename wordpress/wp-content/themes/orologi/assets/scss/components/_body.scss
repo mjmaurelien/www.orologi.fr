@@ -22,6 +22,7 @@ font-family: 'Lato', sans-serif;
   /*border-bottom:1px solid #000000;*/
   font-family:'Lato', sans-serif;;
   font-size:15px;
+  margin-bottom:10px;
 
   ul{
 
@@ -34,15 +35,16 @@ font-family: 'Lato', sans-serif;
 
     }
     &:hover{
-      border-bottom:1px solid #ffb612;
+      border-bottom:1px solid #F5DEB3;
     }
 
     }
   }
   .menu .active>a {
     background:none;
-    color:#ffb612;
-    border-bottom:1px solid #ffb612;
+    color:#F5DEB3;
+    border-bottom:2px solid #F5DEB3;
+    font-weight:700;
   }
 }
 
@@ -66,14 +68,15 @@ font-family: 'Lato', sans-serif;
         text-transform:uppercase;
         display:block;
         margin:auto auto auto auto;
-        border:2px solid #ffb612;
+        border:2px solid #F5DEB3;
         padding:20px 70px;
+        cursor:default;
         h2{
           margin:0 0;
           font-size:50px;
         }
         &:hover{
-          background:rgba(0,0,0,0.7);
+          background:none;
           transition:all 0.5s;
         }
       }
@@ -109,21 +112,26 @@ font-family: 'Lato', sans-serif;
 }
 
 section{
-  margin:40px auto;
+  margin: 0px auto 100px auto;
   h1{
     font-size:32px;
     margin-bottom:0px;
     text-transform:uppercase;
     font-weight:700;
+    text-align:center;
+    margin-bottom:20px;
   }
   hr{
     margin:0px 0px 20px 0px;
-    border:1px solid #ffb612;
+    border:1px solid #F5DEB3;
   }
 }
 .widow{
-  background:red;
-  height:100vh;
+
+  height:100%;
+  padding:20px;
+
+
 }
 .texte{
   h2{
@@ -136,9 +144,9 @@ section{
   font-size:24px;
   padding-top:10px;
   padding-bottom:10px;
-  border:1px solid #ffb612;
+  border:1px solid #F5DEB3;
   &:hover{
-    color:#ffb612;
+    color:#F5DEB3;
     background:none;
   }
 }
@@ -213,64 +221,7 @@ section{
 
 
 
-  .detail{
-    width:100%;
-    display:block;
-    position:absolute;
-    top:-100%;
-    left:0;
-    height:100%;
-    background-color:black;
-    opacity:0.8;
-    transition:0.5s;
-    padding:10px 10px;
-    text-align:center;
-.etoile{
-  margin: auto auto;
-  i{
-    text-decoration:none;
-    color:white;
 
-  }
-}
-
-      .btndetail{
-        background:transparent;
-        color:white;
-        border:1px solid white;
-        margin:auto auto;
-        &:hover{
-          background:white;
-          color:black;
-        }
-      }
-      .btndetail2{
-        background:transparent;
-        color:white;
-        border:1px solid white;
-        margin:50px auto 0 auto;
-        &:hover{
-          background:white;
-          color:black;
-        }
-      }
-
-    p{
-
-    margin: 0px auto 10px auto;
-    color:white;
-    text-align:center;
-    display:block;
-
-    border-bottom:1px dotted white;
-    text-align:center;
-    line-height:30px;
-
-  }
-  img{
-    text-align:center;
-  }
-  }
 
 
 
@@ -310,8 +261,9 @@ section{
 
 .product{
 width:100%;
+height:100%;
   img{
-  border:1px solid #ffb612;
+  border:1px solid #F5DEB3;
 
   }
   h3{
@@ -327,25 +279,50 @@ width:100%;
     font-size:12px !important;
 
   }
-  .add_to_cart_button{
-    background:#ffb612!important;
+  .ajax_add_to_cart{
+    width:100%;
+    height:100%;
+
+    background:#F5DEB3!important;
     color:white!important;
     &:hover{
-      color:black !important;
+      color:grey !important;
+    }
+  }
+  .added_to_cart{
+    width:100%;
+    margin-top:10px;
+    padding:5px 5px!important;
+    text-align:center;
+    vertical-align:middle;
+    background:#e4c893!important;
+    color:white!important;
+    &:hover{
+      color:grey !important;
     }
   }
 }
-.add_to_cart_button{
+
+
+
+
+
+
+
+
+.ajax_add_to_cart{
   margin: auto auto !important;
   background:transparent;
   border:1px solid #fff!important;
   color:white!important;
   &:hover{
-    color:#ffb612 !important;
+    color:#F5DEB3 !important;
     background:transparent;
-    border:1px solid #ffb612!important;
+    border:1px solid #F5DEB3!important;
   }
 }
+
+
 
 .beforfooter{
   background: red !important;
