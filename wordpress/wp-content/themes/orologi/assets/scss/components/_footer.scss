@@ -1,0 +1,55 @@
+#basfooter{
+  background:black;
+  margin-top:0px;
+  #page-full-width{
+    margin:auto;
+    padding:20px 0px;
+    .row{
+      margin-bottom:20px;
+    .reso{
+      color:white;
+      text-align:center;
+      margin-bottom:20px;
+      i{
+        color:white;
+        text-decoration:none;
+        margin-right:10px;
+        @keyframes bounce {
+        	0%, 20%, 60%, 100% {
+        		-webkit-transform: translateY(0);
+        		transform: translateY(0);
+        	}
+
+        	40% {
+        		-webkit-transform: translateY(-20px);
+        		transform: translateY(-20px);
+        	}
+
+        	80% {
+        		-webkit-transform: translateY(-10px);
+        		transform: translateY(-10px);
+        	}
+        }
+      }
+      i:hover{
+        animation: bounce 1s;
+      }
+    }
+    .news{
+      a{
+        color:white;
+        background:none;
+        font-size:24px;
+        text-align:center;
+        padding-top:10px;
+        padding-bottom:10px;
+        border:1px solid #fff;
+        &:hover{
+          color:#fff;
+          background:none;
+        }
+      }
+    }
+    }
+  }
+}

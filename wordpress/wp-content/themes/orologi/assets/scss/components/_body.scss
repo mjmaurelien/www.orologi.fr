@@ -1,0 +1,385 @@
+h1,h2,h3,h4,h5,h6{
+font-family: 'Lato', sans-serif;
+}
+.logo{
+  ul{
+    display:block;
+    margin:0 auto 0 auto;
+    text-align:center;
+    li{
+        margin:0 auto 0 auto;
+        display:block;
+        img{
+          width:13%;
+        }
+    }
+  }
+
+}
+
+.custom-menu{
+  text-align:center;
+  /*border-bottom:1px solid #000000;*/
+  font-family:'Lato', sans-serif;;
+  font-size:15px;
+
+  ul{
+
+    li{
+      display:inline-block;
+      a{
+      text-decoration:none;
+      color:black;
+      text-transform:uppercase;
+
+    }
+    &:hover{
+      border-bottom:1px solid #ffb612;
+    }
+
+    }
+  }
+  .menu .active>a {
+    background:none;
+    color:#ffb612;
+    border-bottom:1px solid #ffb612;
+  }
+}
+
+.bloc{
+  margin-bottom:40px;
+  .bloc-center{
+    position:relative;
+    img{
+      width:100%;
+    }
+    .in{
+      display:flex;
+      width:100%;
+      height:100%;
+      position:absolute;
+      top:0;
+      left:0;
+      a{
+        z-index:2;
+        color:#fff;
+        text-transform:uppercase;
+        display:block;
+        margin:auto auto auto auto;
+        border:2px solid #ffb612;
+        padding:20px 70px;
+        h2{
+          margin:0 0;
+          font-size:50px;
+        }
+        &:hover{
+          background:rgba(0,0,0,0.7);
+          transition:all 0.5s;
+        }
+      }
+
+
+    }
+
+  }
+
+  .zoom{
+    position: relative;
+      -webkit-transition: all 300ms ease-in;
+      -webkit-transform: scale(1);
+      -ms-transition: all 300ms ease-in;
+      -ms-transform: scale(1);
+      -moz-transition: all 300ms ease-in;
+      -moz-transform: scale(1);
+      transition: all 300ms ease-in;
+      transform: scale(1);
+  }
+  .zoom:hover{
+
+      z-index: 2;
+      -webkit-transition: all 200ms ease-in;
+      -webkit-transform: scale(1.1);
+      -ms-transition: all 200ms ease-in;
+      -ms-transform: scale(1.1);
+      -moz-transition: all 200ms ease-in;
+      -moz-transform: scale(1.1);
+      transition: all 200ms ease-in;
+      transform: scale(1.1);
+  }
+}
+
+section{
+  margin:40px auto;
+  h1{
+    font-size:32px;
+    margin-bottom:0px;
+    text-transform:uppercase;
+    font-weight:700;
+  }
+  hr{
+    margin:0px 0px 20px 0px;
+    border:1px solid #ffb612;
+  }
+}
+.widow{
+  background:red;
+  height:100vh;
+}
+.texte{
+  h2{
+    font-family:'Lato', sans-serif;;
+    font-size:30px;
+  }
+.button{
+  color:black;
+  background:none;
+  font-size:24px;
+  padding-top:10px;
+  padding-bottom:10px;
+  border:1px solid #ffb612;
+  &:hover{
+    color:#ffb612;
+    background:none;
+  }
+}
+}
+.petit_visu{
+  height:14em;
+}
+.full{
+  background-size:cover;
+  background-position:center;
+  width:100%;
+  height:100%;
+}
+
+.visu_tow{
+
+  .petit_visu{
+    margin:10px;
+    position:relative;
+    overflow:hidden;
+
+  }
+  .detail{
+    width:100%;
+    display:block;
+    position:absolute;
+    top:-100%;
+    left:0;
+    height:100%;
+    background-color:black;
+    opacity:0.8;
+    transition:0.5s;
+    padding:10px 10px;
+    text-align:center;
+
+.etoile{
+  margin: auto auto;
+  i{
+    text-decoration:none;
+    color:white;
+  }
+}
+
+      .btndetail{
+        background:transparent;
+        color:white;
+        border:1px solid white;
+        margin:auto auto;
+        &:hover{
+          background:white;
+          color:black;
+        }
+      }
+
+    p{
+
+    margin: 0px auto 10px auto;
+    color:white;
+    text-align:center;
+    display:block;
+
+    border-bottom:1px dotted white;
+    text-align:center;
+    line-height:30px;
+
+  }
+  img{
+    text-align:center;
+  }
+  }
+
+
+
+
+  .detail{
+    width:100%;
+    display:block;
+    position:absolute;
+    top:-100%;
+    left:0;
+    height:100%;
+    background-color:black;
+    opacity:0.8;
+    transition:0.5s;
+    padding:10px 10px;
+    text-align:center;
+.etoile{
+  margin: auto auto;
+  i{
+    text-decoration:none;
+    color:white;
+
+  }
+}
+
+      .btndetail{
+        background:transparent;
+        color:white;
+        border:1px solid white;
+        margin:auto auto;
+        &:hover{
+          background:white;
+          color:black;
+        }
+      }
+      .btndetail2{
+        background:transparent;
+        color:white;
+        border:1px solid white;
+        margin:50px auto 0 auto;
+        &:hover{
+          background:white;
+          color:black;
+        }
+      }
+
+    p{
+
+    margin: 0px auto 10px auto;
+    color:white;
+    text-align:center;
+    display:block;
+
+    border-bottom:1px dotted white;
+    text-align:center;
+    line-height:30px;
+
+  }
+  img{
+    text-align:center;
+  }
+  }
+
+
+
+}
+
+.visuel{
+  background:#fff;
+}
+.marques{
+  padding:20px;
+  background-image: url(../images/_fondunivers/fond-homme2.jpg);
+    .nom-marque{
+        display:flex;
+        justify-content:center;
+        align-items: center;
+        padding: 20px;
+        height:100%;
+        background:transparent;
+      }
+    .voir-marque{
+      background:transparent;
+    }
+    a{
+      color:white;
+      background:none;
+      font-size:24px;
+      text-align:center;
+      padding-top:5px;
+      padding-bottom:5px;
+      border:1px solid #fff;
+      &:hover{
+        color:#fff;
+        background:rgba(0,0,0,0.5);
+      }
+    }
+}
+
+.product{
+width:100%;
+  img{
+  border:1px solid #ffb612;
+
+  }
+  h3{
+    text-align: center;
+    color:black;
+    font-size:20px !important;
+    border-bottom: 1px dotted black;
+    margin-bottom: 10px !important;
+  }
+  span{
+    text-align:center;
+    color:black;
+    font-size:12px !important;
+
+  }
+  .add_to_cart_button{
+    background:#ffb612!important;
+    color:white!important;
+    &:hover{
+      color:black !important;
+    }
+  }
+}
+.add_to_cart_button{
+  margin: auto auto !important;
+  background:transparent;
+  border:1px solid #fff!important;
+  color:white!important;
+  &:hover{
+    color:#ffb612 !important;
+    background:transparent;
+    border:1px solid #ffb612!important;
+  }
+}
+
+.beforfooter{
+  background: red !important;
+}
+
+#assurance{
+  width:100%;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3e3e3f+0,2f2d2e+100 */
+  background: #3e3e3f; /* Old browsers */
+  background: -moz-linear-gradient(top, #3e3e3f 0%, #2f2d2e 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #3e3e3f 0%,#2f2d2e 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #3e3e3f 0%,#2f2d2e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3e3e3f', endColorstr='#2f2d2e',GradientType=0 ); /* IE6-9 */
+  height:100%;
+  padding:10px;
+#page-full-width{
+  margin:auto;
+}
+.assurance{
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  padding: 20px;
+  margin:auto;
+  margin:auto;
+  img{
+    margin-right:10px;
+  }
+  p{
+    color:#fff;
+    font-size:14px;
+    line-height:16px;
+    text-transform:uppercase;
+    text-align:center;
+  }
+}
+}
