@@ -12,7 +12,9 @@ get_header(); ?>
 	<div class="small-12 large-8 columns" role="main">
 
 		<?php do_action( 'foundationpress_before_content' ); ?>
-
+		<header>
+	 	 <h1 class="entry-title"><?php the_title(); ?></h1>
+	  </header>
 		<h2><?php _e( 'Search Results for', 'foundationpress' ); ?> "<?php echo get_search_query(); ?>"</h2>
 
 	<?php if ( have_posts() ) : ?>

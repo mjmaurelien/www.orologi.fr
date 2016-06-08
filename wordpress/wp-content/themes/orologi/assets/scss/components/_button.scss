@@ -1,5 +1,7 @@
 /* Reveal */
 .hvr-reveal {
+  background:none;
+  border:1px solid #f5deb3;
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: translateZ(0);
@@ -10,8 +12,14 @@
   -moz-osx-font-smoothing: grayscale;
   position: relative;
   overflow: hidden;
+  &:hover{
+    color:#fff !important;
+    background:#F5DEB3 !important;
+    border:1px solid #F5DEB3!important;
+  }
 }
 .hvr-reveal:before {
+  color:#F5DEB3;
   content: "";
   position: absolute;
   z-index: -1;
@@ -19,7 +27,7 @@
   right: 0;
   top: 0;
   bottom: 0;
-  border-color: #FAEBD7;
+  border-color: #F5DEB3;
   border-style: solid;
   border-width: 0;
   -webkit-transition-property: border-width;
@@ -74,4 +82,19 @@
   -webkit-transform: translateY(0);
   transform: translateY(0);
   border-width: 2px;
+}
+
+
+
+.ajax_add_to_cart{
+  width:100%;
+  margin: auto auto !important;
+  background:transparent;
+  border:1px solid #F5DEB3!important;
+  color:#F5DEB3!important;
+  &:hover{
+    color:#fff !important;
+    background:#F5DEB3 !important;
+    border:1px solid #F5DEB3!important;
+  }
 }

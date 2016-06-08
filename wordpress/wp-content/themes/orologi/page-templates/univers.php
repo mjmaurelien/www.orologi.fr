@@ -7,6 +7,9 @@ get_header(); ?>
 <?php get_template_part( 'template-parts/featured-image' ); ?>
 
 <div role="main">
+  <header>
+    <h1 class="entry-title"><?php the_title(); ?></h1>
+  </header>
 
 <?php do_action( 'foundationpress_before_content' ); ?>
 <div class="homme bloc">
@@ -24,7 +27,7 @@ get_header(); ?>
 
      <!-- debut loop -->
   <?php
-    $args = array( 'post_type' => 'product', 'stock' => 1, 'posts_per_page' => 8, 'orderby' =>'date','order' => 'DESC' );
+    $args = array( 'post_type' => 'product', 'stock' => 1, 'product_cat' => 'homme', 'posts_per_page' => 8, 'orderby' =>'date','order' => 'DESC' );
     $loop = new WP_Query( $args );
     while ( $loop->have_posts() ) : $loop->the_post(); global $product;
     $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'thumbnail' );
@@ -46,8 +49,8 @@ get_header(); ?>
             <p><?php the_title(); ?></p>
             <p>Excellent état</p>
             <p>Disponible</p>
-            <!--<a href="#1" class="expanded button btndetail">Voir plus</a>-->
-            <?php woocommerce_template_loop_add_to_cart( $loop->post, $product ); ?>
+            <a href="<?php the_permalink() ?>" class="button large-12 small-12 hvr-reveal">En savoir plus</a>
+          <!--  <?php woocommerce_template_loop_add_to_cart( $loop->post, $product ); ?>-->
           </div>
 
 
@@ -74,7 +77,7 @@ get_header(); ?>
 
      <!-- debut loop -->
   <?php
-    $args = array( 'post_type' => 'product', 'stock' => 1, 'posts_per_page' => 12, 'orderby' =>'date','order' => 'DESC' );
+    $args = array( 'post_type' => 'product', 'stock' => 1, 'product_cat' => 'femme', 'posts_per_page' => 12, 'orderby' =>'date','order' => 'DESC' );
     $loop = new WP_Query( $args );
     while ( $loop->have_posts() ) : $loop->the_post(); global $product;
     $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'thumbnail' );
@@ -96,8 +99,8 @@ get_header(); ?>
             <p><?php the_title(); ?></p>
             <p>Excellent état</p>
             <p>Disponible</p>
-            <!--<a href="#1" class="expanded button btndetail">Voir plus</a>-->
-            <?php woocommerce_template_loop_add_to_cart( $loop->post, $product ); ?>
+            <a href="<?php the_permalink() ?>" class="button large-12 small-12 hvr-reveal">En savoir plus</a>
+          <!--  <?php woocommerce_template_loop_add_to_cart( $loop->post, $product ); ?>-->
           </div>
 
 

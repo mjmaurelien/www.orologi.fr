@@ -1,0 +1,80 @@
+table{
+  border:none !important;
+  border-radius:0px !important;
+
+  thead{
+    background:#F5DEB3;
+    color:white;
+    box-shadow:none;
+  }
+  tbody{
+    tr{
+      background:transparent !important;
+    }
+    .product-quantity{
+      .quantity{
+        input{
+          border:1px solid #F5DEB3;
+          color:#feac10;
+        }
+      }
+    }
+    .product-name{
+      a{
+        text-decoration:none !important;
+        color:#fcd68e;
+        &:hover{
+          color:#feac10 !important;
+
+          transition:0.5s;
+        }
+      }
+
+    }
+    .actions{
+      background:none;
+      .coupon{
+        .input-text{
+          width:200px !important;
+          box-shadow:none !important;
+          border:1px solid #F5DEB3 !important;
+        }
+        .button{
+          font-size:16px;
+          font-family:'Lato', sans-serif;
+          background:none !important;
+          border:1px solid #8fae1b !important;
+          box-shadow:none;
+          height:auto;
+          color:#8fae1b;
+          box-shadow:none;
+          transition:0.5s;
+          &:hover{
+            color:#fff !important;
+            background:#8fae1b !important;
+            border:1px solid #7b980e!important;
+            transition:0.5s;
+          }
+        }
+      }
+      .button{
+        font-size:15px;
+        font-family:'Lato', sans-serif;
+        background:none !important;
+        border:1px solid #8fae1b !important;
+        box-shadow:none;
+        height:auto;
+        color:#8fae1b;
+        box-shadow:none;
+        transition:0.5s;
+        &:hover{
+          color:#fff !important;
+          background:#8fae1b !important;
+          border:1px solid #7b980e!important;
+          transition:0.5s;
+        }
+      }
+    }
+
+  }
+}

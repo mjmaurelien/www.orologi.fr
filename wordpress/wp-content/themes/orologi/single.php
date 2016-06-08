@@ -8,7 +8,10 @@
 
 get_header(); ?>
 
-<div id="single-post" role="main">
+<div role="main">
+	<section class="widow">
+
+	   <div class="row">
 
 <?php do_action( 'foundationpress_before_content' ); ?>
 <?php while ( have_posts() ) : the_post(); ?>
@@ -33,12 +36,14 @@ get_header(); ?>
 			<p><?php the_tags(); ?></p>
 		</footer>
 		<?php do_action( 'foundationpress_post_before_comments' ); ?>
-		<?php comments_template(); ?>
+		
 		<?php do_action( 'foundationpress_post_after_comments' ); ?>
 	</article>
 <?php endwhile;?>
 
 <?php do_action( 'foundationpress_after_content' ); ?>
-<?php get_sidebar(); ?>
+
+</div>
+</section>
 </div>
 <?php get_footer();

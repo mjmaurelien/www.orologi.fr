@@ -7,21 +7,13 @@
  */
 
 get_header(); ?>
-
 <div class="row">
-	<div class="small-12 large-8 columns" role="main">
-		<div class="row bloc">
-			<div class="small-12 large-4 columns">
-				<h1>jgklsjdklsj</h1>
-			</div>
-			<div class="small-12 large-4 columns">
-				<h1>jgklsjdklsj</h1>
-			</div>
-			<div class="small-12 large-4 columns">
-				<h1>jgklsjdklsj</h1>
-			</div>
+		<?php get_sidebar(); ?>
+	</div>
+<div class="row">
 
-		</div>
+	<div class="small-12 large-12 columns" role="main">
+
 	<?php do_action( 'foundationpress_before_content' ); ?>
 
 	<?php while ( woocommerce_content() ) : the_post(); ?>
@@ -48,6 +40,6 @@ get_header(); ?>
 	<?php do_action( 'foundationpress_after_content' ); ?>
 
 	</div>
-	<?php get_sidebar(); ?>
+
 </div>
 <?php get_footer();

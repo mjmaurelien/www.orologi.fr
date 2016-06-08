@@ -1,0 +1,107 @@
+.sidebar{
+  h6{
+    font-size:20px;
+    font-family:'Lato', sans-serif;
+    color:#F5DEB3;
+  }
+  form{
+    input[type="submit"]{
+      width:20%;
+      height:40px;
+      border:none;
+      margin:10px 0 50px 0!important;
+      background:#F5DEB3!important;
+      color:white!important;
+      &:hover{
+        color:grey !important;
+      }
+    }
+    .price_slider{
+      background:#feac10!important;
+      .ui-slider-range{
+        background:#F5DEB3!important;
+    }
+    .ui-slider-handle{
+      background:#F5DEB3!important;
+    }
+  }
+  .price_slider_amount{
+    .button{
+      width:20%;
+      height:40px;
+      border:none;
+      margin:10px 0 50px 0!important;
+      background:#F5DEB3!important;
+      color:white!important;
+      &:hover{
+        color:grey !important;
+      }
+    }
+  }
+}
+}
+.onsale{
+  color:#FFF !important;
+  text-transform:uppercase !important;
+  min-height: 3.236em;
+  min-width: 10em !important;
+  padding: .202em;
+  font-weight: 400;
+  position: absolute;
+  text-align: center;
+  line-height: 3.236;
+  top: 0em!important;
+  left: 0em!important;
+  border-radius: 0% !important;
+  background-color: #000!important;
+  color: #fff;
+  font-size: 1,5em !important;
+  -webkit-font-smoothing: antialiased;
+}
+.product{
+width:100%;
+height:100%;
+  img{
+  border:1px solid #F5DEB3;
+
+  }
+  h3{
+    text-align: center;
+    color:black;
+    font-size:20px !important;
+    border-bottom: 1px dotted black;
+    margin-bottom: 10px !important;
+  }
+  span{
+    text-align:center;
+    color:black;
+    font-size:12px !important;
+    del{
+      float:left;
+      margin-left:50px;
+    }
+
+  }
+  .ajax_add_to_cart{
+    width:100%;
+    height:100%;
+
+    background:#F5DEB3!important;
+    color:white!important;
+    &:hover{
+      color:grey !important;
+    }
+  }
+  .added_to_cart{
+    width:100%;
+    margin-top:10px;
+    padding:5px 5px!important;
+    text-align:center;
+    vertical-align:middle;
+    background:#e4c893!important;
+    color:white!important;
+    &:hover{
+      color:grey !important;
+    }
+  }
+}

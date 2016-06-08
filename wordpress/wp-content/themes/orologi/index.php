@@ -16,13 +16,13 @@
 get_header(); ?>
 
 
- <?php get_template_part( 'template-parts/featured-image' ); ?>
+
 
  <div id="page" role="main">
    <div class="row bloc">
      <div class="small-12 large-4 columns">
        <div class="bloc-center zoom">
-         <a href="http://localhost/www.orologi.fr/wordpress/index.php/marque/">
+         <a href="http://localhost/www.orologi.fr/wordpress/index.php/?page_id=62">
          <img src="<?= _URL_IMAGES; ?>/_bloc/bloc1.jpg" alt=""/>
          <div class="in">
            <h2>marques<hr></h2>
@@ -32,7 +32,7 @@ get_header(); ?>
      </div>
      <div class="small-12 large-4 columns">
        <div class="bloc-center zoom">
-         <a href="http://localhost/www.orologi.fr/wordpress/index.php/nouveautes/">
+         <a href="http://localhost/www.orologi.fr/wordpress/?page_id=66">
          <img src="<?= _URL_IMAGES; ?>/_bloc/bloc2.jpg" alt=""/>
          <div class="in">
            <h2>nouveautés<hr></h2>
@@ -42,10 +42,10 @@ get_header(); ?>
      </div>
      <div class="small-12 large-4 columns">
        <div class="bloc-center zoom">
-         <a href="http://localhost/www.orologi.fr/wordpress/index.php/type-de-montre/">
+         <a href="http://localhost/www.orologi.fr/wordpress/?page_id=60">
          <img src="<?= _URL_IMAGES; ?>/_bloc/bloc3.jpg" alt=""/>
          <div class="in">
-           <h2>montres<hr></h2>
+           <h2>Bracelets<hr></h2>
          </div>
        </a>
        </div>
@@ -63,7 +63,7 @@ get_header(); ?>
 	   <div class="row">
        <!-- debut loop -->
     <?php
-      $args = array( 'post_type' => 'product', 'stock' => 1, 'posts_per_page' => 8, 'orderby' =>'date','order' => 'DESC' );
+      $args = array( 'post_type' => 'product', 'stock' => 1, 'product_cat' => 'nouveautés', 'posts_per_page' => 8, 'orderby' =>'date','order' => 'DESC' );
       $loop = new WP_Query( $args );
       while ( $loop->have_posts() ) : $loop->the_post(); global $product;
       $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'thumbnail' );
@@ -87,7 +87,8 @@ get_header(); ?>
               <p><i class="fa fa-check" aria-hidden="true" style="margin-right:10px"></i>Excellent état</p>
               <p><i class="fa fa-check" aria-hidden="true" style="margin-right:10px"></i>Disponible</p>
               <!--<a href="#1" class="expanded button btndetail">Voir plus</a>-->
-              <?php woocommerce_template_loop_add_to_cart( $loop->post, $product ); ?>
+              <a href="<?php the_permalink() ?>" class="button large-12 small-12 hvr-reveal">En savoir plus</a>
+            <!--  <?php woocommerce_template_loop_add_to_cart( $loop->post, $product ); ?>-->
             </div>
 
         </div>
@@ -112,7 +113,7 @@ get_header(); ?>
          <div class="small-12 large-8 columns visuel owl-carousel " id="owl-carousel">
 
            <?php
-             $args = array( 'post_type' => 'product', 'stock' => 1, 'posts_per_page' => 4, 'orderby' =>'date','order' => 'DESC' );
+             $args = array( 'post_type' => 'product', 'stock' => 1,'product_cat' => 'recommandation', 'posts_per_page' => 4, 'orderby' =>'date','order' => 'DESC' );
              $loop = new WP_Query( $args );
              while ( $loop->have_posts() ) : $loop->the_post(); global $product;
              $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'thumbnail' );
@@ -144,7 +145,7 @@ get_header(); ?>
          <div class="row">
 
            <?php
-             $args = array( 'post_type' => 'product', 'stock' => 1, 'posts_per_page' => 4, 'orderby' =>'date','order' => 'DESC' );
+             $args = array( 'post_type' => 'product', 'stock' => 1,'product_cat' => 'recommandation', 'posts_per_page' => 4, 'orderby' =>'date','order' => 'DESC' );
              $loop = new WP_Query( $args );
              while ( $loop->have_posts() ) : $loop->the_post(); global $product;
              $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'thumbnail' );
@@ -183,22 +184,22 @@ get_header(); ?>
     <div id="page-full-width" role="main">
       <div class="row">
         <div class="small-3 large-3 columns nom-marque">
-          <img src="<?= _URL_IMAGES; ?>/_marque/rollex.jpg" alt=""/>
+          <img src="<?= _URL_IMAGES; ?>/_marque/rolex.jpg" alt=""/>
         </div>
         <div class="small-3 large-3 columns nom-marque">
-          <img src="<?= _URL_IMAGES; ?>/_marque/rollex.jpg" alt=""/>
+          <img src="<?= _URL_IMAGES; ?>/_marque/zenith.jpg" alt=""/>
         </div>
         <div class="small-3 large-3 columns nom-marque">
-          <img src="<?= _URL_IMAGES; ?>/_marque/rollex.jpg" alt=""/>
+          <img src="<?= _URL_IMAGES; ?>/_marque/chanel.jpg" alt=""/>
         </div>
         <div class="small-3 large-3 columns nom-marque">
-          <img src="<?= _URL_IMAGES; ?>/_marque/rollex.jpg" alt=""/>
+          <img src="<?= _URL_IMAGES; ?>/_marque/cartier.jpg" alt=""/>
         </div>
       </div>
 
       <div class="row">
         <div class="large-4 large-offset-4 columns">
-          <a href="#" class="large-12 small-12 hvr-reveal2">En voir plus</a>
+          <a href="http://localhost/www.orologi.fr/wordpress/index.php/?page_id=62" class="large-12 small-12 hvr-reveal2">En voir plus</a>
         </div>
       </div>
     </div>

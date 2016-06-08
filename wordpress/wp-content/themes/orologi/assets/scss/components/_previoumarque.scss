@@ -1,0 +1,28 @@
+.marques{
+  padding:20px;
+  background-image: url(../images/_fondunivers/fond-homme2.jpg);
+    .nom-marque{
+        display:flex;
+        justify-content:center;
+        align-items: center;
+        padding: 20px;
+        height:100%;
+        background:transparent;
+      }
+    .voir-marque{
+      background:transparent;
+    }
+    a{
+      color:white;
+      background:none;
+      font-size:24px;
+      text-align:center;
+      padding-top:5px;
+      padding-bottom:5px;
+      border:1px solid #fff;
+      &:hover{
+        color:#fff;
+        background:rgba(0,0,0,0.5);
+      }
+    }
+}

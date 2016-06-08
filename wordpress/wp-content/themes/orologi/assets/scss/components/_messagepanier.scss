@@ -1,0 +1,67 @@
+.woocommerce-message{
+  background:rgba(143,174,27,0.2) !important;
+  color:#8fae1b !important;
+  a{
+    font-size:20px;
+    font-family:'Lato', sans-serif;
+    background:none !important;
+    border:1px solid #8fae1b !important;
+
+    box-shadow:none;
+    color:black;
+    box-shadow:none;
+    transition:0.5s;
+    &:hover{
+      color:#fff !important;
+      background:#8fae1b !important;
+      border:1px solid #7b980e!important;
+      transition:0.5s;
+    }
+  }
+}
+.entry-content{
+  .woocommerce{
+    .return-to-shop{
+      a{
+      font-size:20px;
+      font-family:'Lato', sans-serif;
+      background:none!important;
+      border:1px solid #ecc06d!important;
+      width:300px;
+      height:50px;
+      box-shadow:none;
+      color:black;
+      box-shadow:none;
+      transition:0.5s;
+      &:hover{
+        color:#fff !important;
+        background:#F5DEB3 !important;
+        border:1px solid #F5DEB3!important;
+        transition:0.5s;
+      }
+      }
+    }
+
+  }
+}
+.woocommerce-error{
+  background:rgba(184,28,35,0.2) !important;
+  color:#b81c23 !important;
+  a{
+    font-size:20px;
+    font-family:'Lato', sans-serif;
+    background:none !important;
+    border:1px solid #8fae1b !important;
+
+    box-shadow:none;
+    color:black;
+    box-shadow:none;
+    transition:0.5s;
+    &:hover{
+      color:#fff !important;
+      background:#8fae1b !important;
+      border:1px solid #7b980e!important;
+      transition:0.5s;
+    }
+  }
+}

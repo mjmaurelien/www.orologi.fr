@@ -29,16 +29,18 @@
 
 	<?php do_action( 'foundationpress_layout_start' ); ?>
 	<div class="row">
+
 		<div class="small-12 large-12 columns logo">
 			<ul class="menu">
 				<li class="home"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?= _URL_IMAGES; ?>/_bloc/logo_orologi.png" alt=""/></a></li>
 			</ul>
 		</div>
+
 	</div>
 	<header id="masthead" class="site-header" role="banner">
-
 		<nav class="custom-menu">
 		  <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
+			
 		</nav>
 
 

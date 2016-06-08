@@ -1,0 +1,49 @@
+.wpcf7{
+  background-color:#fff;
+  opacity:0.8;
+  padding:20px 20px;
+  .wpcf7-form{
+    color:black;
+    font-size:16px;
+    font-family:'Lato', sans-serif;
+    p{
+      span{
+        input{
+          background:none;
+          border:1px solid #ecc06d;
+          color:black;
+          box-shadow:none;
+        }
+        textarea{
+          background:none;
+          border:1px solid #ecc06d;
+          color:black;
+          box-shadow:none;
+        }
+      }
+      .envoyer{
+        font-size:20px;
+        font-family:'Lato', sans-serif;
+        background:none;
+        border:1px solid #ecc06d;
+        width:300px;
+        height:50px;
+        box-shadow:none;
+        color:black;
+        box-shadow:none;
+        transition:0.5s;
+        &:hover{
+          color:#fff !important;
+          background:#F5DEB3 !important;
+          border:1px solid #F5DEB3!important;
+          transition:0.5s;
+        }
+      }
+    }
+  }
+}
+.contacttext{
+  p{
+    text-align:center;
+  }
+}

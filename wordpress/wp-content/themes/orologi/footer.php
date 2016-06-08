@@ -30,15 +30,15 @@
 		        </div>
 		        <div class="small-12 large-3 columns assurance">
 		           <img src="<?= _URL_IMAGES; ?>/_icon/qualite.png" alt=""/>
-		           <p>LIVRAISON RAPIDE ET SÉCURISÉE</p>
+		           <p>AUTHENTICITÉ ET TRAÇABILITÉ DES PRODUITS</p>
 		        </div>
 		        <div class="small-12 large-3 columns assurance">
 		           <img src="<?= _URL_IMAGES; ?>/_icon/garantie.png" alt=""/>
-		           <p>LIVRAISON RAPIDE ET SÉCURISÉE</p>
+		           <p>GARANTIE MINIMUM D’UN AN</p>
 		        </div>
 		        <div class="small-12 large-3 columns assurance">
 		           <img src="<?= _URL_IMAGES; ?>/_icon/sansfrai.png" alt=""/>
-		           <p>LIVRAISON RAPIDE ET SÉCURISÉE</p>
+		           <p>PAIEMENT EN PLUSIEURS FOIS SANS FRAIS</p>
 		        </div>
 		      </div>
 		    </div>
@@ -46,33 +46,31 @@
 		  <div id="basfooter" >
 		    <div id="page-full-width">
 		      <div class="row">
-		        <div class="small-12 large-8 columns reso">
-		           <a href="#" class="animationrotate"><i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i></a>
-		           <a href="#" class="animationrotate"><i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i></a>
-		           <a href="#" class="animationrotate"><i class="fa fa-pinterest-square fa-3x" aria-hidden="true"></i></a>
-		           <a href="#" class="animationrotate"><i class="fa fa-instagram fa-3x" ></i></a>
-		        </div>
-		        <div class="small-12 large-4 columns news">
+		        <div class="small-12 large-12 columns news">
 		          <a href="#" class="large-12 small-12 hvr-reveal2">s'abonner à la newsletter</a>
 		        </div>
 		      </div>
-		      <div class="row">
+		      <div class="row lien_footer">
 		        <div class="small-12 large-4 columns reso">
-		           <p>LIVRAISON RAPIDE ET SÉCURISÉE</p>
-		           <p>LIVRAISON RAPIDE ET SÉCURISÉE</p>
-		           <p>LIVRAISON RAPIDE ET SÉCURISÉE</p>
+								<a href="http://localhost/www.orologi.fr/wordpress/?post_type=product"><p>Boutique</p></a>
+		           	<a href="http://localhost/www.orologi.fr/wordpress/?page_id=133"><p>Contact</p></a>
+		           	<a href="http://localhost/www.orologi.fr/wordpress/?page_id=133"><p>A propos</p></a>
+								<a href="http://localhost/www.orologi.fr/wordpress/?page_id=133"><p>Garanties</p></a>
 		        </div>
 		        <div class="small-12 large-4 columns reso">
-		          <p>LIVRAISON RAPIDE ET SÉCURISÉE</p>
-		          <p>LIVRAISON RAPIDE ET SÉCURISÉE</p>
-		          <p>LIVRAISON RAPIDE ET SÉCURISÉE</p>
+		          <a href="http://localhost/www.orologi.fr/wordpress/index.php/?page_id=62"><p>Marques</p></a>
+		          <a href="http://localhost/www.orologi.fr/wordpress/?page_id=60"><p>Bracelets</p></a>
+		          <a href="http://localhost/www.orologi.fr/wordpress/?page_id=66"><p>Nouveautés</p></a>
+							<p>
+			           <a href="#" class="animationrotate"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+			           <a href="#" class="animationrotate"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+			           <a href="#" class="animationrotate"><i class="fa fa-pinterest-square" aria-hidden="true"></i></a>
+			           <a href="#" class="animationrotate"><i class="fa fa-instagram" ></i></a>
+			        </p>
 		        </div>
-		        <div class="small-12 large-4 columns reso">
-		          <p>LIVRAISON RAPIDE ET SÉCURISÉE</p>
-		          <p>LIVRAISON RAPIDE ET SÉCURISÉE</p>
-		          <p>LIVRAISON RAPIDE ET SÉCURISÉE</p>
+						<div class="small-12 large-4 columns reso">
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4779.068620464316!2d7.7406640503890705!3d48.5850383485375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0000000000000000%3A0xed78782525eaaaa8!2sPlace+des+Montres!5e0!3m2!1sfr!2sfr!4v1465311149866" width="300" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
 		        </div>
-
 		      </div>
 		    </div>
 		  </div>
@@ -132,7 +130,8 @@ $('#owl-carousel2').owlCarousel({
 			nav:false,
 			items:1,
 			autoplay:true,
-			autoplayTimeout:4000,
+			autoplayTimeout:6000,
+
 
 	    responsive:{
 	        0:{
@@ -146,6 +145,15 @@ $('#owl-carousel2').owlCarousel({
 	        }
 	    }
 })
+
+
+
+if ( $( ".entry-summary" ).length ) {
+
+	$('.sidebar').remove()
+	$('.row .small-12').removeClass('large-8')
+
+}
 </script>
 
 <?php wp_footer(); ?>

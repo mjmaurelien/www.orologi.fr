@@ -1,0 +1,46 @@
+.logo{
+  ul{
+    display:block;
+    margin:0 auto 0 auto;
+    text-align:center;
+    li{
+        margin:0 auto 0 auto;
+        display:block;
+        img{
+          width:13%;
+        }
+    }
+  }
+
+}
+
+.custom-menu{
+  text-align:center;
+  /*border-bottom:1px solid #000000;*/
+  font-family:'Lato', sans-serif;;
+  font-size:15px;
+  margin-bottom:10px;
+
+  ul{
+
+    li{
+      display:inline-block;
+      a{
+      text-decoration:none;
+      color:black;
+      text-transform:uppercase;
+
+    }
+    &:hover{
+      border-bottom:1px solid #F5DEB3;
+    }
+
+    }
+  }
+  .menu .active>a {
+    background:none;
+    color:#F5DEB3;
+    border-bottom:2px solid #F5DEB3;
+    font-weight:700;
+  }
+}
