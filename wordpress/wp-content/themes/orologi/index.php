@@ -121,12 +121,12 @@ get_header(); ?>
            ?>
 
            <div class="item" data-hash="<?php echo $product->id ?>">
-             <div class="large-6 small-6 columns visu_one">
+             <div class="large-6 small-12 columns visu_one">
                <div class="visu">
                  <img src="<?php echo $url ?>" alt=""/>
                </div>
              </div>
-             <div class="large-6 small-6 columns texte">
+             <div class="large-6 small-12 columns texte">
                <h2><? the_title() ?></h2>
                <div class="">
                  <?php echo the_excerpt() ?>
